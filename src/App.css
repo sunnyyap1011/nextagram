@@ -98,24 +98,4 @@
 .inputfile + label * {
 	pointer-events: none;
 }
-
-/* .uploadBtn {
-  background-color: #99c793;
-  border-radius: 50px;
-  overflow: hidden;
-}
- 
-
-.uploadBtn::before {
-  color: #fff;
-  content: "\f382";
-  font-family: "Font Awesome 5 Pro";
-  font-size: 100%;
-  height: 100%;
-  right: 130%;
-  line-height: 3.3;
-  position: absolute;
-  top: 0px;
-  transition: all 0.3s;
-} */
       
