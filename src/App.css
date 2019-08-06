@@ -1,0 +1,121 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* [type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+[type="file"] + label {
+  background: #f15d22;
+  box-shadow: 0 6px darken(#f79159, 10%);;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: inherit;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 0.8rem 1rem;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+} */
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+  background: #f15d22;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: inherit;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 0.6rem;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: darken(#f15d22, 10%);
+}
+
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.inputfile + label * {
+	pointer-events: none;
+}
+
+/* .uploadBtn {
+  background-color: #99c793;
+  border-radius: 50px;
+  overflow: hidden;
+}
+ 
+
+.uploadBtn::before {
+  color: #fff;
+  content: "\f382";
+  font-family: "Font Awesome 5 Pro";
+  font-size: 100%;
+  height: 100%;
+  right: 130%;
+  line-height: 3.3;
+  position: absolute;
+  top: 0px;
+  transition: all 0.3s;
+} */
+      
