@@ -49,7 +49,7 @@ class UploadPage extends React.Component {
                     });
                     toast.success("Image Uploaded Successfully!")
                     console.log(response.data.image_url)
-                    this.props.addNewImage(response.data.image_url)
+                    this.props.refetch()
                 } 
             })
             .catch(error => {

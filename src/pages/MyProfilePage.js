@@ -12,16 +12,7 @@ class MyProfilePage extends React.Component {
         images: []
     }
 
-    addNewImage = (img) => {
-        const newImages = [...this.state.images]
-        newImages.push(img)
-        console.log(newImages)
-        this.setState({
-            images: newImages
-        })
-    }
-
-    componentDidMount() {
+    fetchImage = () => {
         const JWT = this.props.currentUser.jwt
         Axios({
             method: "GET",
@@ -44,6 +35,10 @@ class MyProfilePage extends React.Component {
             })
     }
 
+    componentDidMount() {
+        this.fetchImage()
+    }
+
     render() {
         const { images, isLoading } = this.state
         const {username, profilePicture} = this.props.currentUser
@@ -57,7 +52,7 @@ class MyProfilePage extends React.Component {
                 <div className="userInfo">
                     <img className="profileImg" src={profilePicture} />
                     <h4 className="username">@{username}</h4>
-                    <UploadPage className="uploadPage" addNewImage={this.addNewImage}></UploadPage>
+                    <UploadPage className="uploadPage" refetch={this.fetchImage}></UploadPage>
                 </div>
                 <UserImagesContainer>
                     {
